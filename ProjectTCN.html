@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div id="preloader">
+
+    </div>
+    <section class="showcase">
+        <header>
+          <h2 class="logo">TCN</h2>
+          <div class="toggle"></div>
+        </header>
+        <video src="tcn.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+          <h2>THE</h2> 
+          <h3>Change In Nepal</h3>
+          <p>A multi-featured website for information and materials.</p>
+          <a href="">Explore</a>
+        </div>
+        <ul class="social">
+          <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+          <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+          <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+    </section>
+      <div class="menu">
+        <ul>
+          <li><a href="https://the-change-in-nepal.000webhostapp.com/#">Homepage</a></li>
+          <li><a href="https://nsc.gov.np/en/">Sports</a></li>
+          <li><a href="https://moe.gov.np/">Education</a></li>
+          <li><a href="https://www.nepalyouthfoundation.org/">Charity</a></li>
+          <li><a href="https://www.facebook.com/officialroutineofnepalbanda">News</a></li>
+        </ul>
+      </div>
+      <div class="cursor"></div>
+      <script>
+         const cursor = document.querySelector('.cursor');
+
+          document.addEventListener('mousemove', e => {
+          cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+          })
+
+          document.addEventListener('click', () => {
+         cursor.classList.add("expand");
+
+         setTimeout(() => {
+         cursor.classList.remove("expand");
+         }, 500)
+         })
+      </script>
+      <script>
+        const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      })
+      </script>
+
+     <script>
+        var loader=document.getElementById("preloader");
+        window.addEventListener("load", function(){
+           loader.style.display ="none";
+           })
+      </script>
+
+</body>
+</html>
